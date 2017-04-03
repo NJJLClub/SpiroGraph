@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Spiro by Jim Laderoute</title>
+        <meta name="description" content="Spiro By Jim Laderoute">
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="jquery-3.1.1.js"></script>
+        <script type="text/javascript" src="app.js"  ></script>
+    </head>
+    <body onload="app();">
+        
+        <canvas id="mycanvas" width="1280" height="800" > </canvas>
+        
+        <!-- Here are some 'knobs' the user can turn to get different designs -->
+        
+        <div class="controls">
+        
+            <input type=button id="pause" value="Pause" onclick="togglePause()"> </input>
+            <input type=button title="Erase The Screen" value="Clear" onclick="clearScreen()"></input>
+            <input type=button  value="+vx"   onclick="plusvx(1)"></input>
+            <input type=button  value="-vx"   onclick="plusvx(-1)"></input>
+            <label id="vx">VX</label>
+
+            <input type=button  value="+vy" onclick="plusvy(1)"></input>
+            <input type=button  value="-vy" onclick="plusvy(-1)"></input>
+            <label id="vy"></label>
+
+            <input type=button  value="+degree" onclick="plusAngleDegree(1)"></input>
+            <input type=button  value="-degree" onclick="plusAngleDegree(-1)"></input>
+            <label id="degree">0</label>
+
+            <input type=button  value="+radius" onclick="plusRadius(1)"></input>
+            <input type=button  value="-radius" onclick="plusRadius(-1)"></input>
+            <label id="radius">0</label>
+
+            <select id="selectColor" onchange="colorChanged()">
+                <option value="red"> Red </option>
+                <option value="green"> Green</option>
+                <option value="blue">Blue </option>
+            </select>
+
+
+        </div>
+        
+    </body>
+</html>
